@@ -340,3 +340,119 @@ ORDER BY
 - 在仪表盘编辑界面，点击 “+ ADD CHARTS”，选择之前创建的可视化图表添加到仪表盘。
 - 调整图表的位置和大小，使仪表盘布局合理。
 - 保存仪表盘，即可随时查看 MTD、QTD、YTD 的人员流动率情况。 
+
+
+
+
+以下是针对你的要求，使用 Common Table Expression (CTE) 重新编写的计算 MTD、QTD 和 YTD 员工流失率的 SQL 代码，充分考虑了按天存储数据以及 `employee_ID` 去重的问题：
+
+### 计算 MTD 员工流失率
+```sql
+-- 先获取所有 distinct 的 snapshot_date 中的最大月份的最大日期作为 MTD 的截止日期
+WITH MTDMaxDate AS (
+    SELECT MAX(snapshot_date) AS mtd_max_date
+    FROM (
+        SELECT DISTINCT snapshot_date
+        FROM employee
+    ) AS subquery
+    WHERE DATE_TRUNC('month', snapshot_date) = DATE_TRUNC('month', (SELECT MAX(snapshot_date) FROM (SELECT DISTINCT snapshot_date FROM employee) AS inner_subquery))
+),
+-- 计算当月至今的相关数据
+MTDData AS (
+    SELECT 
+        TO_VARCHAR(DATE_TRUNC('month', mmd.mtd_max_date), 'YYYY-MM') AS mtd_period,
+        COUNT(DISTINCT CASE WHEN e.status = 'resign' AND e.snapshot_date <= mmd.mtd_max_date AND DATE_TRUNC('month', e.snapshot_date) = DATE_TRUNC('month', mmd.mtd_max_date) THEN e.employee_id END) AS num_resigned_mtd,
+        COUNT(DISTINCT CASE WHEN e.status = 'in service' AND e.snapshot_date <= mmd.mtd_max_date AND DATE_TRUNC('month', e.snapshot_date) = DATE_TRUNC('month', mmd.mtd_max_date) THEN e.employee_id END) AS num_in_service_mtd
+    FROM 
+        employee e,
+        MTDMaxDate mmd
+)
+-- 计算 MTD 平均员工数量和员工流失率
+SELECT 
+    mtd_period,
+    num_resigned_mtd,
+    num_in_service_mtd,
+    ((num_resigned_mtd + num_in_service_mtd) / 2) AS average_employees_mtd,
+    ROUND(100.0 * num_resigned_mtd / ((num_resigned_mtd + num_in_service_mtd) / 2), 2) AS turnover_rate_mtd
+FROM 
+    MTDData;
+```
+
+### 计算 QTD 员工流失率
+```sql
+-- 先获取所有 distinct 的 snapshot_date 中的最大季度的最大日期作为 QTD 的截止日期
+WITH QTDMaxDate AS (
+    SELECT MAX(snapshot_date) AS qtd_max_date
+    FROM (
+        SELECT DISTINCT snapshot_date
+        FROM employee
+    ) AS subquery
+    WHERE DATE_TRUNC('quarter', snapshot_date) = DATE_TRUNC('quarter', (SELECT MAX(snapshot_date) FROM (SELECT DISTINCT snapshot_date FROM employee) AS inner_subquery))
+),
+-- 计算本季度至今的相关数据
+QTDData AS (
+    SELECT 
+        TO_VARCHAR(DATE_TRUNC('quarter', qmd.qtd_max_date), 'YYYY-Q') AS qtd_period,
+        COUNT(DISTINCT CASE WHEN e.status = 'resign' AND e.snapshot_date <= qmd.qtd_max_date AND DATE_TRUNC('quarter', e.snapshot_date) = DATE_TRUNC('quarter', qmd.qtd_max_date) THEN e.employee_id END) AS num_resigned_qtd,
+        COUNT(DISTINCT CASE WHEN e.status = 'in service' AND e.snapshot_date <= qmd.qtd_max_date AND DATE_TRUNC('quarter', e.snapshot_date) = DATE_TRUNC('quarter', qmd.qtd_max_date) THEN e.employee_id END) AS num_in_service_qtd
+    FROM 
+        employee e,
+        QTDMaxDate qmd
+)
+-- 计算 QTD 平均员工数量和员工流失率
+SELECT 
+    qtd_period,
+    num_resigned_qtd,
+    num_in_service_qtd,
+    ((num_resigned_qtd + num_in_service_qtd) / 2) AS average_employees_qtd,
+    ROUND(100.0 * num_resigned_qtd / ((num_resigned_qtd + num_in_service_qtd) / 2), 2) AS turnover_rate_qtd
+FROM 
+    QTDData;
+```
+
+### 计算 YTD 员工流失率
+```sql
+-- 先获取所有 distinct 的 snapshot_date 中的最大年份的最大日期作为 YTD 的截止日期
+WITH YTDMaxDate AS (
+    SELECT MAX(snapshot_date) AS ytd_max_date
+    FROM (
+        SELECT DISTINCT snapshot_date
+        FROM employee
+    ) AS subquery
+    WHERE DATE_TRUNC('year', snapshot_date) = DATE_TRUNC('year', (SELECT MAX(snapshot_date) FROM (SELECT DISTINCT snapshot_date FROM employee) AS inner_subquery))
+),
+-- 计算本年度至今的相关数据
+YTDData AS (
+    SELECT 
+        TO_VARCHAR(DATE_TRUNC('year', ymd.ytd_max_date), 'YYYY') AS ytd_period,
+        COUNT(DISTINCT CASE WHEN e.status = 'resign' AND e.snapshot_date <= ymd.ytd_max_date AND DATE_TRUNC('year', e.snapshot_date) = DATE_TRUNC('year', ymd.ytd_max_date) THEN e.employee_id END) AS num_resigned_ytd,
+        COUNT(DISTINCT CASE WHEN e.status = 'in service' AND e.snapshot_date <= ymd.ytd_max_date AND DATE_TRUNC('year', e.snapshot_date) = DATE_TRUNC('year', ymd.ytd_max_date) THEN e.employee_id END) AS num_in_service_ytd
+    FROM 
+        employee e,
+        YTDMaxDate ymd
+)
+-- 计算 YTD 平均员工数量和员工流失率
+SELECT 
+    ytd_period,
+    num_resigned_ytd,
+    num_in_service_ytd,
+    ((num_resigned_ytd + num_in_service_ytd) / 2) AS average_employees_ytd,
+    ROUND(100.0 * num_resigned_ytd / ((num_resigned_ytd + num_in_service_ytd) / 2), 2) AS turnover_rate_ytd
+FROM 
+    YTDData;
+```
+
+### 代码解释
+
+#### MTD 计算部分
+1. **MTDMaxDate CTE**：
+首先通过子查询获取 `employee` 表中所有不同的 `snapshot_date`。然后在外部查询中，筛选出这些日期中最大月份的日期，并从中选取最大的日期作为 MTD 计算的截止日期 `mtd_max_date`。这样可以确保是基于该月最后一天的数据来计算 MTD 员工流失率。
+2. **MTDData CTE**：
+基于前面得到的 MTD 截止日期，按照日期条件筛选出当月至今的数据。使用 `COUNT(DISTINCT...)` 函数分别统计离职员工和在职员工的唯一 `employee_id` 数量，并按照月份进行格式化显示时间段。
+3. **最终计算和输出**：
+根据 MTDData 中统计的离职和在职员工数量，计算平均员工数量，再按照员工流失率的计算公式得出 MTD 员工流失率，并保留两位小数输出。
+
+#### QTD 和 YTD 计算部分
+逻辑与 MTD 计算部分类似，只是时间粒度从月份分别变为季度和年份。在 `QTDMaxDate` CTE 中获取最大季度的最大日期作为 QTD 计算的截止日期；在 `YTDMaxDate` CTE 中获取最大年份的最大日期作为 YTD 计算的截止日期。后续基于这些截止日期分别进行相关数据的统计和员工流失率的计算。
+
+你可以在 Superset 的 SQL Lab 中依次复制粘贴上述代码并执行，以分别获取 MTD、QTD 和 YTD 的员工流失率计算结果。 
