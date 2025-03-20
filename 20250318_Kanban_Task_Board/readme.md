@@ -11,3 +11,11 @@
 #AEEEEE Rebecca Boucher
 
 #BBFFFF Tania Del Torre
+
+
+Cancelled
+Done
+Draft
+In Progress
+Testing
+To Refine
