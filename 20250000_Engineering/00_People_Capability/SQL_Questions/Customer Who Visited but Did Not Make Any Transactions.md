@@ -32,9 +32,12 @@ The result format is in the following example.
 Solution:
 
 # Write your MySQL query statement below
+
+``` sql
 select v.customer_id , count(v.Visit_id) as count_no_trans
 from Visits v
 left join transactions t
 on t.Visit_id = v.Visit_id
 where t.transaction_id is null
 group by v.customer_id
+```
