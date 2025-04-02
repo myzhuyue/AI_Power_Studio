@@ -19,7 +19,7 @@ The result format is in the following example.
 
 Soution:
 
-# Write your MySQL query statement below
+## Write your MySQL query statement below
 
 ``` sql
 Select name

@@ -31,7 +31,7 @@ The result format is in the following example.
 
 Solution:
 
-# Write your MySQL query statement below
+## Write your MySQL query statement below
 
 ``` sql
 select v.customer_id , count(v.Visit_id) as count_no_trans

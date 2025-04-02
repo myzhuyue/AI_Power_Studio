@@ -125,6 +125,19 @@ Potential data inconsistencies
 6. [Customer Who Visited but Did Not Make Any Transactions](./SQL_Questions/Customer%20Who%20Visited%20but%20Did%20Not%20Make%20Any%20Transactions.md)
 7. [Employee Bonus](./SQL_Questions/Employee%20Bonus.md)
 8. [Find Customer Refree](./SQL_Questions/Find%20Customer%20Refree.md)
+9. [Immediate Food Delivery II](./SQL_Questions/Immediate%20Food%20Delivery%20II.md)
+10. [Invalid Tweets](./SQL_Questions/Invalid%20Tweets.md)
+11. [Managers with at Least 5 Dirsct Reports](./SQL_Questions/Managers%20with%20at%20Least%205%20Direct%20Reports.md)
+12. [Monthly Transactions I](./SQL_Questions/Monthly%20Transactions%20I.md)
+13. [Not Boring Movies](./SQL_Questions/Not%20Boring%20Movies.md)
+14. [Percentage of Users Attended a Contest](./SQL_Questions/Percentage%20of%20Users%20Attended%20a%20Contest.md)
+15. [Product Sales Analysis 1](./SQL_Questions/Product%20Sales%20Analysis%201.md)
+16. [Project Employees I](./SQL_Questions/Project%20Employees%20I.md)
+17. [Queries Quality and Percentage](./SQL_Questions/Queries%20Quality%20and%20Percentage.md)
+18. [Recycle and Low Fat Products](./SQL_Questions/Recycle%20and%20Low%20Fat%20Products.md)
+19. [Replace Employee ID With The Unique Identifier](./SQL_Questions/Replace%20Employee%20ID%20With%20The%20Unique%20Identifier.md)
+20. [Rising Temperature](./SQL_Questions/Rising%20Temperature.md)
+21. [Students and Examinations](./SQL_Questions/Students%20and%20Examinations.md)
 
 ### Python
 1. **Why is Python popular in data engineering?**

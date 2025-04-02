@@ -35,7 +35,7 @@ The result format is in the following example.
 
 Solution:
 
-# Write your MySQL query statement below
+## Write your MySQL query statement below
 
 ``` sql
 select  s.user_id,  

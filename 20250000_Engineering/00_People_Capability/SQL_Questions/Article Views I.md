@@ -23,7 +23,7 @@ The result format is in the following example.
 
 Soultion: 
 
-# Write your MySQL query statement below
+## Write your MySQL query statement below
 
 ``` sql
 select distinct author_id as id
