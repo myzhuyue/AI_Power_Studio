@@ -1,5 +1,5 @@
 
-# TOP 50 Engineering Questions for Interview
+# Top Engineering Questions for Interview
 
 > Version 1.0
 > 
@@ -17,10 +17,7 @@ Keep in mind, all below questions could be dive into more deeper based on differ
 >  - The Hadoop Distributed File System (HDFS) for storage
 >  - MapReduce for processing.
 
-2. **What the difference between Parquet and Orc file format**
-
-
-3. **Explain the concept of MapReduce.**
+2. **Explain the concept of MapReduce.**
 
 > MapReduce is a programming model and processing technique for distributed computing. It consists of two main phases:
 > 
@@ -40,7 +37,9 @@ Keep in mind, all below questions could be dive into more deeper based on differ
 > - Versatility: Spark supports various workloads beyond batch processing,including streaming and machine learning
 > - Iterative processing: Spark is more efficient for iterative algorithms common in machine learning
 
-5. **What is the difference between a data lake and a data warehouse?**
+5. **What the difference between Parquet and Orc file format**
+
+6. **What is the difference between a data lake and a data warehouse?**
 
 > A: Key differences include:
 > - Data structure: Data warehouses store structured data, while data lakes can store structured, semi-structured, and unstructured data
@@ -48,14 +47,14 @@ Keep in mind, all below questions could be dive into more deeper based on differ
 > - Schema: Data warehouses use schema-on-write, while data lakes use schema-on-read
 > - Users: Data warehouses are typically used by business analysts, while data lakes are often used by data scientists
 
-6. **What is the Lambda architecture?**
+7. **What is the Lambda architecture?**
 
 > The Lambda architecture is a data processing architecture designed to handle massive quantities of data by taking advantage of both batch and stream processing methods. It consists of three layers:
 > - Batch layer: Manages the master dataset and pre-computes batch views
 > - Speed layer: Handles real-time data processing
 > - Serving layer: Responds to queries by combining results from batch and speed layers
 
-7. **Explain the concept of data partitioning.** 
+8. **Explain the concept of data partitioning.** 
 
 > Data partitioning is the process of dividing a large dataset into smaller, more manageable pieces called partitions. This technique is used to improve query performance, enable parallel processing, and manage large datasets more effectively. Common partitioning strategies include:
 > - Range partitioning
