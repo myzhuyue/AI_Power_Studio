@@ -1,0 +1,33 @@
+companyId,E2282
+companyName,Morgan Stanley
+companySize,10000+ Employees
+companyUrl,www.morganstanley.com
+companyLocation,"New York, NY"
+com_user_id,90415590
+reviewDateTime,2024-08-26T04:07:10.413
+jobTitle,Vice President - Technology
+isCurrentJob,TRUE
+LengthOfEmployment,0
+EmploymentStatus,REGULAR
+location,
+ratingOverall,5
+ratingWorkLifeBalance,0
+ratingCultureAndValues,0
+ratingDiversityAndInclusion,0
+ratingCareerOpportunities,0
+ratingCompensationAndBenefits,0
+ratingSeniorLeadership,0
+summary,Good culture
+advice,
+pros,"nice culture to work in
+work is highly recognised"
+cons,"unique tech stack
+not much opportunity to grow"
+ratingRecommendToFriend,
+ratingCeo,
+ratingBusinessOutlook,
+countHelpful,0
+countNotHelpful,0
+jobTitle_clean,vice president technology
+LengthOfEmployment_Label,less than 1 year
+location_with_country,
