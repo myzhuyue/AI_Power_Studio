@@ -115,3 +115,82 @@ return IF(ISBLANK(a), 0, a)
 # UIUX
 
 - 曼彻斯特大学官方的颜色是：紫色#660099，黄色#FFCC33，灰色#999999。我们以紫色和黄色为准就好。
+
+
+# Issue Solving
+
+``` sql
+income_uom_rg_ind_eng_switch = 
+SWITCH(
+    SELECTEDVALUE(University[uom_rg]),
+    "University of Manchester", [income_uom_ind_ratio%],
+    [income_rus_ind_ratio%]
+)
+
+dim_industry_engagement = 
+UNION(
+    ROW("Category", "University of Manchester", "Industry Engagement", [income_uom_ind_ratio%]),
+    ROW("Category", "Russell Group", "Industry Engagement", [income_rus_ind_ratio%])
+)
+
+
+income_uom_rg_res_switch = 
+SWITCH(
+    SELECTEDVALUE(University[uom_rg]),
+    "University of Manchester", [income_uom_res],
+    [income_avg_rus_res]
+)
+
+dim_research_council_income = 
+UNION(
+    ROW("Category", "University of Manchester", "Research Income", [income_uom_res]),
+    ROW("Category", "Russell Group", "Research Income", [income_avg_rus_res])
+)
+```
+
+文件中包含一个工作表“data”，其中包含4个字段学位：“level of study”, 性质："mode of study", 曼彻斯特大学学生人数："uom staff number", 罗素集团学生人数："rus staff number".
+
+要求通过Power BI DAX进行下面计算：
+
+1. 计算“曼彻斯特大学”， “罗素集团”，在学位，性质两个维度下，各个维度成员下的学生人数的数量，比例；
+2. 将"level of study"维度下的“first degree”、"postgraduate taught"、"postgraduate research"三个维度成员，与“mode of study”维度下的“full”维度成员合并在一个新的维度中，展示各自的原始学生人数比例。
+
+
+``` sql
+dim_level_mode = 
+UNION(
+    SELECTCOLUMNS(
+        FILTER('HESA Student', 'HESA Student'[Level of study] IN {"First Degree", "Postgraduate (taught)", "Postgraduate (research)"}),
+        "level mode dimension", 'HESA Student'[Level of study],
+        "uom student number", [stu_num_uom],
+        "rus student number", [stu_num_rus]
+    ),
+    SELECTCOLUMNS(
+        FILTER('HESA Student', 'HESA Student'[Mode of study] = "Full-time"),
+        "level mode dimension", 'HESA Student'[Mode of study],
+        "uom student number", [stu_num_uom],
+        "rus student number", [stu_num_rus]
+    )
+)
+```
+
+``` sql
+stu_rus_all = 
+CALCULATE(SUM('HESA Student'[Number]), FILTER(University, University[Russell Group] = "Member"), FILTER('HESA Student', 'HESA Student'[Academic Year] = "2023/24"))
+
+stu_rus_all_1 = 
+CALCULATE(SUM(dim_level_mode[rus student number]))
+
+stu_rus_all_ratio = 
+DIVIDE([stu_rus_all_1], [stu_rus_all])
+
+
+stu_uom_all = 
+CALCULATE(SUM('HESA Student'[Number]), FILTER(University, University[UKPRN] = "10007798"), FILTER('HESA Student', 'HESA Student'[Academic Year] = "2023/24"))
+
+stu_uom_all_1 = 
+CALCULATE(SUM(dim_level_mode[uom student number]))
+
+stu_uom_all_ratio = 
+DIVIDE([stu_uom_all_1], [stu_uom_all])
+```
