@@ -74,4 +74,4 @@ for index, row in df_review_header.iterrows():
                 ws.append([review_id, 'Cons', main_category, sub_category])
 
 # 保存修改后的 Excel 文件
-wb.save('./20250505_Bank/01_source/DataGlassdoor/review_updated.xlsx')
+wb.save('./AI_Power_Studio/20250505_Bank/01_source/DataGlassdoor/review_updated.xlsx')
