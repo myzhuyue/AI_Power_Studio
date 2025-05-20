@@ -1,125 +1,221 @@
 
-### 职责描述:
-
-1. 负责集团数据板块规划及管理工作，包括数据分析、数据可视化及数据仓库建设
-2. 搭建数据经营分析体系，包括零售管理体系、商品管理体系、财务管理体系等
-3. 分析市场趋势、用户行为和竞争对手数据，为产品和市场策略提供数据支持
-4. 设计和维护数据报告和仪表板，以实时监控关键业务指标
-5. 管理数据分析项目，包括预算规划、时间表和资源分配
-6. 推动数据科学和分析方法的创新，以提高数据分析的效率和准确性
-7. 向高级管理层提供数据驱动的见解和建议
-
-#### 任职要求:
-
-1. 本科学位，英文流利，优先考虑数据科学、统计学、计算机科学或相关领域
-2. 8年以上数据分析经验，至少3年团队管理经验
-3. 强大的数据可视化能力，熟练使用Power BI、观远、帆软等可视化工具
-4. 精通数据分析工具和技术，如SQL、Python、R、Hadoop和Spark
-5. 优秀的沟通和演讲技巧，能够向非技术人员解释复杂的数据分析结果
-6. 对数据驱动的决策和业务策略有深入的理解
-7. 能够在快节奏和不断变化的环境中工作
-
-vc.feishu.cn/j/635580236
+Here’s the re-grouped categorization of the first part of the document ("Recommended Data Engineering Mental Model and Rule of Thumbs") into structured categories, maintaining the original focus and terminology:
 
 
-技术能力
-
-Change and collaboration
-
-MVP, Minimal viable product
-
-PR/FAQ, press release, Frequecy asked questions.
-
-Always make the 1st steps, and ask opinions from the people what else Can I do better.
-
-Focus on the Company's strategy, Goals; Align with the your department and oneself.
-
-Embrance the new tech, always keep learning, get best practice.
-
-Excellence engineering, acclarate the effciency.
+### **1. Data Source Comprehension**  
+**Objective**: Establish a foundational understanding of data origins and characteristics.  
+- **Data Lineage & Update Dynamics**  
+  - Source system/ancestor tables  
+  - Update frequency (batch/stream) and triggering mechanisms  
+- **Data Structure & Quality**  
+  - Schema design (table structure, column types)  
+  - Business semantics of columns (clarity of naming, absence of ambiguity)  
+  - Overall data quality (completeness, accuracy)  
+  - Value distributions (outliers, null rates)  
+- **Architectural Planning**  
+  - Number of tables required for the pipeline and their relationships  
 
 
-向面试官提问，重点在于了解岗位细节、职业发展、团队协作等内容。从工作重点、职业成长、团队构成等角度为你准备了一些问题：
+### **2. Downstream Consumption Mapping**  
+**Objective**: Align data outputs with business needs through end-user requirements.  
+- **Usage Scenario Analysis**  
+  - Typical analytical models (dimensions, hierarchies, measures)  
+  - Dashboard visualization patterns (e.g., chart types for key metrics)  
+  - Pivot table logic (grouping, aggregation methods)  
+  - Common user questions (identified via TTD or similar tools)  
+- **Priority Management**  
+  - Classification of core vs. non-core columns  
+  - Quality assurance prioritization for high-impact fields  
 
-1. 目前集团数据板块中，最紧急需要解决的问题或者最优先推进的项目是什么，数据经营分析体系里哪部分最为关键？
 
-2. 公司对于这个岗位在数据分析创新方面，有怎样的资源支持和时间规划，是否有专门的预算用于新技术和新方法的探索？
+### **3. Data Modeling Fundamentals**  
+**Objective**: Design robust schemas for efficient storage and querying.  
+- **Key Design Principles**  
+  - Primary keys and unique constraints (ensuring data uniqueness)  
+  - Partition key strategies (aligned with data warehouse/lake architecture)  
+- **Transformation Logic Framework**  
+  - **Column-Level Operations**  
+    - Standardization (e.g., date formats, LOV normalization)  
+    - Null handling (filling strategies, standardized N/A representations)  
+    - Semantic validation (consistency of 0/1/Y/N notations)  
+  - **Row-Level Operations**  
+    - Cross-table mapping (with validation of join keys, especially across teams)  
+    - Derived calculations (e.g., unit price = sales / volume)  
+    - Row splitting/merging  
+      - Rule-based splitting (preservation of original records)  
+      - Aggregation/grouping (retention of granular data vs. summary)  
+  - **Control Field Integration**  
+    - Timestamps, change flags (create/update/delete markers)  
+    - Access control and role-based flags  
 
-3. 这个岗位的晋升路径和职业发展规划是怎样的，未来有机会负责跨部门的合作项目吗？
 
-4. 能介绍下现有团队成员的专业背景和分工情况吗，团队目前面临的主要挑战是什么 ？
+### **4. Transformation Process Refinement**  
+**Objective**: Optimize workflow readability, maintainability, and performance.  
+- **Logical Clustering & Documentation**  
+  - Categorization of transformations by business logic (e.g., time dimension processing, product hierarchy mapping)  
+  - Non-technical descriptions of logic groups (avoid over-reliance on SQL specifics)  
+- **Validation Checkpoints**  
+  - Sanity checks after each transformation phase  
+    - Row count consistency (pre/post-transformation)  
+    - Common-sense validation (e.g., relevance of mm:ss in daily transaction data)  
+    - Distribution analysis (identification of anomalies)  
+    - Hierarchy validation (parent-child relationship integrity)  
+- **Performance & Code Discipline**  
+  - Preference for simple transformation languages over complex UDFs  
+  - Minimization of temporary tables (in-memory computations where feasible)  
+  - Separation of DDL operations from transformation logic  
+  - Avoidance of monolithic SQL scripts (use CTEs for readability)  
 
-5. 公司未来在数据安全和隐私保护方面有哪些战略规划，这会对日常的数据工作产生怎样的影响？
 
-### Team Management
+### **5. Collaboration & Validation Protocols**  
+**Objective**: Ensure alignment through cross-functional review and rigorous testing.  
+- **Stakeholder Engagement**  
+  - Joint reviews with data stewards/requestors to validate logic  
+  - Rapid failure iteration and adjustments (following SOP for dataset releases)  
+- **End-to-End Testing**  
+  - Pipeline validation for errors, consistency, and conflicts  
+  - Performance profiling (runtime metrics, row impact analysis)  
 
-1. 提高团队积极性
-   1. 提供内部荣誉，奖励
-   2. 团建，文化建设
-   3. 个人关怀，归属感
-2. 团队冲突管理
-   1. 了解冲突本质
-   2. 目标&工作态度
-   3. 技能诊断&培养
-3. 跨部门沟通
-   1. 部门利益
-   2. 业务亮点
-   3. 数据价值
 
-### 团队管理
+### **Categorization Rationale**  
+1. **Workflow-Oriented Structure**: Organizes practices along the data engineering lifecycle (source → consumption → modeling → transformation → validation).  
+2. **Business-Technical Balance**: Integrates both technical implementation (e.g., key design, performance optimization) and business context (e.g., downstream scenarios, non-technical documentation).  
+3. **Actionable Groupings**: Clusters discrete best practices into phases, enabling engineers to apply them systematically at each stage of pipeline development.
 
-1. 过往组织变革如何处理的（可参考公司或其他leader如何处理）
-2. 团队的人有不合适，快刀斩乱麻，能充当黑脸
-3. 到新公司能带来自己的心腹吗（带团队的人多长时间，如何培养）
-4. 下属/老板如何评价你
+---
 
-## 在搭建零售管理体系时，您会如何选取关键指标？如果业务部门与您对指标选取存在分歧，您会如何解决？​
+Here’s a **PowerPoint visual design concept** to illustrate the relationship between the 5 categories and the "Recommended Data Engineering Mental Model and Rule of Thumbs." This design uses a circular flow diagram to emphasize interconnectedness and a step-by-step workflow.
 
-答案：搭建零售管理体系时
 
-- 从业务目标出发，如提升销售额、优化库存周转率等，选取与之紧密相关的指标。
-  - 销售额、客单价
-  - 毛利率、库存天数
-  - SKU 动销率
-- 参考行业标准和企业历史数据，确保指标具有代表性和可对比性。当与业务部门存在分歧时，我会先倾听他们的想法和需求，了解他们对指标的期望和考量因素。
-- 结合数据的可获取性、准确性以及对业务决策的实际价值，向业务部门解释我的选取理由。通过案例分析和数据模拟，展示不同指标对业务分析和决策的影响，最终达成共识，确定最合适的关键指标。​
+### **Slide Title: Data Engineering Mental Model & Best Practices**  
+**Subtitle: Holistic Framework for Building Robust Data Pipelines**  
 
-## 您在搭建商品管理体系时，如何利用数据分析优化商品的选品和汰换策略？​
-答案：
 
-- 分析历史销售数据，包括商品的销量、销售额、毛利率、销售周期等，找出畅销商品和滞销商品。
-- 对于畅销商品，进一步分析其用户群体特征、购买场景等，判断其市场潜力和可持续性；
-- 对于滞销商品，分析其滞销原因，如是否因价格过高、产品功能不符合市场需求等。
-- 结合市场趋势数据和竞争对手商品信息，了解行业新品动态和市场需求变化。
-- 在选品方面，优先选择市场需求大、与企业定位相符且具有差异化竞争优势的商品；
-- 在汰换策略上，对于长期滞销且无改进空间的商品，及时进行淘汰，为新商品腾出空间，优化商品结构，提高整体销售业绩和库存效率。​
+### **Visual Layout: Circular Flow Diagram**  
+![Conceptual Circular Flow Diagram](https://via.placeholder.com/800x400?text=Data+Engineering+Mental+Model+Circular+Flow)  
+*Note: Replace placeholder image with actual PowerPoint diagram.*  
 
-## 搭建财务管理体系的数据经营分析模型时，您会如何确保数据的准确性和及时性？​
 
-答案：为确保数据准确性
+### **PowerPoint Implementation Steps & Content**  
+#### **1. Central Core: Mental Model Overview**  
+- **Center Circle** (bold title):  
+  **Recommended Data Engineering Mental Model**  
+- **Subtext**:  
+  "Align data sourcing, modeling, and validation with business needs."  
 
-- 建立严格的数据核对机制，对财务数据的来源进行逐一验证，包括与业务系统数据、银行流水、发票等进行比对。
-- 采用数据校验规则和算法，对数据进行逻辑检查，如检查借贷是否平衡、金额是否异常等。
-- 定期进行数据审计，及时发现和纠正数据错误。在保证数据及时性方面，优化数据采集和传输流程，利用自动化工具实现数据的实时或定时采集
-- 建立数据传输的监控机制，确保数据能够快速、准确地传输到分析系统。
-- 与财务部门和其他相关部门建立良好的沟通机制，明确数据提供的时间节点和要求，保障数据按时到位，为财务管理体系的实时分析和决策提供支持。​
+#### **2. Surrounding Circular Categories (5 Key Phases)**  
+Arrange the 5 categories in a clockwise flow around the central core, connected by arrows to show progression and iteration. Use distinct colors for each category (e.g., as in the Mermaid diagram).  
 
-## 当企业业务模式发生变化，原有的数据经营分析体系不再适用，您会如何重新搭建新的体系？​
+| Category                | Icon/Graphic Suggestion       | Key Subpoints (Bullet Points)                          |  
+|-------------------------|---------------------------------|-------------------------------------------------------|  
+| **1. Data Source Comprehension** | Globe or database icon         | - Lineage, update frequency, schema<br>- Data quality & distributions |  
+| **2. Downstream Consumption Mapping** | User/analytics icon           | - Usage scenarios, dashboards, user questions<br>- Priority field classification |  
+| **3. Data Modeling Fundamentals** | Schema/key icon                | - Primary/partition keys<br>- Column/row transformations, control fields |  
+| **4. Transformation Process Refinement** | Gear or pipeline icon          | - Logic clustering, sanity checks<br>- Performance optimization (no complex UDFs) |  
+| **5. Collaboration & Validation Protocols** | People/validation icon         | - Stakeholder reviews, end-to-end testing<br>- Fast failure iteration |  
 
-答案：
+#### **3. Arrows & Callouts for Relationships**  
+- **Bidirectional Arrows** between categories to highlight iteration (e.g., feedback from validation (5) to data modeling (3)).  
+- **Callout Boxes** for key rules of thumb:  
+  - *"Design for readability: Minimize temp tables and complex SQL."*  
+  - *"Prioritize high-impact fields and validate with business users early."*  
 
-- 深入了解业务模式变化的具体内容和目标，与业务部门进行充分沟通，收集他们对新分析体系的需求和期望。
-- 对原有的数据经营分析体系进行全面评估，分析哪些部分可以继续沿用，哪些需要调整或重新设计。
-- 根据新的业务需求和数据特点，重新梳理数据指标体系，确定新的关键业务指标和分析维度。
-- 在数据采集和整合方面，调整数据来源和采集方式，确保能够获取到满足新体系需求的数据。
-- 对数据仓库的架构进行优化或重构，以适应新的数据处理和分析要求。
-- 设计新的数据报告和可视化方案，将新的分析结果以直观、易懂的方式呈现给业务部门和管理层，帮助他们进行决策，确保新的数据经营分析体系能够有效支持企业新业务模式的发展。​
-  
-## 在搭建多个数据经营分析体系过程中，如何避免重复建设，实现数据资源的高效共享？​
+#### **4. Example Slide Content (Text-Based Alternative)**  
+If diagrams are limited, use a **2x3 grid layout** with icons and text:  
+```
+| Category                | Icon   | Key Focus Areas                                  | Rule of Thumb                                  |  
+|-------------------------|--------|-------------------------------------------------|------------------------------------------------|  
+| 1. Data Source Comprehension | 🔍     | Source lineage, update patterns, data quality    | "Know your data’s origin before building."     |  
+| 2. Downstream Consumption Mapping | 📊     | User scenarios, analytics models, priority fields | "Build for how data will be used, not just stored." |  
+| 3. Data Modeling Fundamentals | 🗄️     | Keys, transformations, control fields           | "Simplify logic: Prefer standard functions over UDFs." |  
+| 4. Transformation Process Refinement | ⚙️     | Clustering, validation, performance            | "Test in phases: Check row counts and distributions after each step." |  
+| 5. Collaboration & Validation Protocols | 👥     | Stakeholder reviews, end-to-end testing         | "Fail fast: Validate with users before finalizing." |  
+```
 
-答案：
 
-- 在搭建体系前，我会进行整体的数据规划，对企业的数据资产进行全面梳理，明确各体系的数据需求和数据边界。
-- 建立统一的数据标准和规范，包括数据定义、数据格式、数据编码等，确保不同体系的数据能够相互兼容和共享。
-- 采用数据仓库的分层架构设计，将基础数据层、中间数据层和应用数据层进行分离，在基础数据层集中存储和管理企业的原始数据，通过中间数据层对数据进行加工和处理，形成可复用的数据模块，为多个分析体系提供支持。
-- 建立数据共享平台或数据服务接口，实现数据在不同体系之间的快速传输和调用，避免数据的重复存储和处理，提高数据资源的利用效率，降低数据建设和维护成本。
+### **Design Tips for PowerPoint**  
+1. **Color Scheme**: Use the same palette as the Mermaid diagram (e.g., pastels for categories, bold for the core).  
+2. **Icons**: Use Flaticon or PowerPoint’s built-in icons (e.g., `Database`, `Analytics`, `People`, `Gear`).  
+3. **Animations**: Add slide transitions to highlight the flow (e.g., "Stretch" or "Zoom" for category reveal).  
+4. **Example Slide Text**:  
+   > *"Every data pipeline starts with understanding its source and ends with ensuring it meets business needs. This model ensures alignment across technical design and stakeholder expectations."*  
+
+This visual emphasizes the **iterative, collaborative nature** of data engineering while grounding best practices in a clear, repeatable framework.
+
+
+---
+
+
+Here’s a **reimagined visual design** for the data engineering mental model, combining a modern workflow diagram with layered components to emphasize clarity, collaboration, and iterative improvement. This design uses a horizontal flow with interconnected stages and a central feedback loop.
+
+
+### **Redesigned Visual: Data Engineering Mental Model Workflow**  
+![Redesigned Workflow Diagram](https://via.placeholder.com/1200x500?text=Data+Engineering+Mental+Model+Horizontal+Flow)  
+*Note: Replace placeholder with actual PowerPoint elements.*
+
+
+### **Key Design Components**  
+#### **1. Horizontal Workflow Stages (Left to Right)**  
+Arrange the 5 categories in a linear progression, the central "Mental Model" hub, and a feedback loop for iteration.  
+
+| Stage                | Icon/Color | Visual Representation                          | Key Questions/Actions                          |  
+|----------------------|------------|-------------------------------------------------|-------------------------------------------------|  
+| **1. Data Source Comprehension** | 🔍 Blue    | Database icon with input arrows                | "Where does the data come from? What’s its quality?" |  
+| **2. Downstream Consumption Mapping** | 📊 Green   | User dashboard icon with output arrows         | "How will users use this data? What matters most?" |  
+| **3. Data Modeling Fundamentals** | 🧱 Purple  | Schema blocks and keys                          | "How to structure tables? What transformations are needed?" |  
+| **4. Transformation Process Refinement** | ⚙️ Orange  | Pipeline gears and validation checkmarks        | "Are transformations efficient and readable?" |  
+| **5. Collaboration & Validation** | 👥 Red     | People icons with review/checklist             | "Have stakeholders validated this? Does it meet SOP?" |  
+
+#### **2. Central Mental Model Hub**  
+- **Center Circle**:  
+  **Data Engineering Mental Model**  
+  *Subtext:* "Align technical design with business goals at every stage."  
+- **Surrounding Principles** (as floating labels):  
+  - "Start with why (business needs)."  
+  - "Simplify logic for maintainability."  
+  - "Test early, iterate often."  
+
+#### **3. Feedback Loop & Iteration**  
+- **Curved Arrow from Stage 5 to Stage 1**:  
+  Label: **Iterative Improvement**  
+  *Text:* "Lessons from validation inform future pipelines."  
+- **Dashed Arrows Between Stages**:  
+  Show cross-stage dependencies (e.g., Stage 4 → Stage 2 for re-prioritizing fields).  
+
+#### **4. Visual Hierarchy & Contrast**  
+- **Bold Colors**: Use high-contrast hues (blue, green, purple, orange, red) to distinguish stages.  
+- **Icons**: Simple, monoline icons (from Flaticon or Font Awesome) for quick recognition.  
+- **Flow Arrows**: Thick solid lines for primary workflow, dashed lines for feedback/iteration.  
+
+
+### **PowerPoint Implementation Steps**  
+1. **Layout Setup**:  
+   - Insert a horizontal flowchart canvas (Page Setup → Landscape).  
+   - Use a central circle (Insert → Shapes → Oval) for the mental model hub.  
+
+2. **Stage Blocks**:  
+   - Create 5 rectangular blocks (1.5x3 inches each) with rounded corners.  
+   - Add icons and stage names in bold, with subtext in smaller font.  
+   - Example for Stage 1:  
+     ```  
+     🔍<br><b>Data Source Comprehension</b><br>  
+     <i>Lineage, Update Frequency, Data Quality</i>  
+     ```  
+
+3. **Arrows and Connections**:  
+   - Primary flow: Straight arrows with arrowheads (Insert → Shapes → Arrows).  
+   - Feedback loop: Curved arrow (Insert → Shapes → Curved Arrow) with "Iterative Improvement" label.  
+   - Add text callouts for key rules of thumb (e.g., "Avoid complex UDFs" near Stage 4).  
+
+4. **Animations**:  
+   - Animate stages left-to-right with "Fly In" effects.  
+   - Trigger the feedback loop animation after all stages are visible, using a "Pulse" effect for the central hub.  
+
+
+### **Design Rationale**  
+- **Linear Clarity**: Horizontal flow is intuitive for step-by-step processes, making it easier for audiences to follow the workflow.  
+- **Central Hub Emphasis**: The mental model is positioned as the core philosophy guiding all stages, not just a standalone step.  
+- **Iteration Focus**: The feedback loop highlights that data engineering is never "finished"—it evolves with validation and new requirements.  
+- **Visual Scalability**: Each stage can be expanded into sub-slides with detailed best practices (e.g., a deep dive into modeling transformations).  
+
+This design balances simplicity with depth, making it suitable for both high-level overviews and detailed training sessions.
