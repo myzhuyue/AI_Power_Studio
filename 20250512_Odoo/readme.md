@@ -1,3 +1,21 @@
+# 20250525开发纪要
+
+## 已知问题
+
+1. contact 表中，"industry", "Salesperson", "Trading Partner ID"均为空，后期会影响分析维度；
+2. product 表中，缺少product id，无法通过name字段作为主键，有重复记录。目前只能通过sku与sales oorder line表中的 “Product”字段进行匹配。
+3. salesorder 表中缺少sales order number，目前使用"Order Reference"字段代替；
+4. salesorderline表中，缺少sales order line number, 多个字段如“CF RMA Unit Serial Number”，“CF Serial Number[1-10]”， “CF-ShipExpress SO Return Tracking”为空，表中product名称与product表的name信息无法匹配；
+
+## 模型设计
+
+![sales model](./03_document/model_2025-05-25%20174243.png)
+
+
+## 报告设计
+
+![报告设计](./03_document/report_2025-05-25%20175834.png)
+
 # 需求说明文档
 
 ## 1. 背景简介
