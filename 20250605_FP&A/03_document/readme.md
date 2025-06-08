@@ -84,13 +84,56 @@ Using the provided monthly P&L, prepare a structured analysis that includes:
 
 4. ***Data Modeling*** snapshot
 
-![Data Modeling](./2.%20data%20modeling.jpeg)
+![Data Modeling](./2.%20data%20modeling%20-v2.png)
 
 ## DAX Design & Implementation
 
+1. Total Amount
 
+```sql
+amount_0_ebitda = 
+var a = CALCULATE(SUM('FP&A'[amount]), FILTER(ALL('Levels'), 'Levels'[Level 0] = "EBITDA"))
+return IF(ISBLANK(a), 0, a)
+```
+
+2. Total Gross Profit
+
+```sql
+amount_1_grossprofit = 
+var a = CALCULATE(SUM('FP&A'[amount]), FILTER(ALL('Levels'), 'Levels'[Level 1] = "Gross Profit"))
+return IF(ISBLANK(a), 0, a)
+```
+
+3. Total Overheads
+
+```sql
+amount_1_overheads = 
+var a = CALCULATE(SUM('FP&A'[amount]), FILTER(ALL('Levels'), 'Levels'[Level 1] = "Overheads"))
+return IF(ISBLANK(a), 0, a)
+```
+
+4. Total Revenue
+
+```sql
+amount_2_revenue = 
+var a = CALCULATE(SUM('FP&A'[amount]), FILTER(ALL('Levels'), 'Levels'[Level 2] = "Revenue"))
+return IF(ISBLANK(a), 0, a) // Revenue, Gross Profit
+```
+
+5. Total Cost of Sales
+
+```sql
+amount_2_costofsales = 
+var a = CALCULATE(SUM('FP&A'[amount]), FILTER(ALL('Levels'), 'Levels'[Level 2] = "Cost of Sales"))
+return IF(ISBLANK(a), 0, a) // Revenue, Gross Profit
+```
+
+---
 
 ## Dashboard Design & Implementation
 
+![Dashboard](./Overview.png)
+
+---
 
 ## Q&A
