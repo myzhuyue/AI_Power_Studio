@@ -31,14 +31,16 @@
 2. `date` column formatted as `yyyy-mm-dd` to meet data modeling requirement.
 ---
 
+![data cleansing & transformation](./01%20-%20data%20cleansing%20&%20transformation.png)
+
 ## Data Modeling
 
 1. A calendar table is created for a many:1 relationship with `exchange_rate` table
 
 ```sql
 calendar = 
-var min_dt = MIN('FP&A'[date_new])
-var max_dt = MAX('FP&A'[date_new])
+var min_dt = MIN(exchange_rate[Date])
+var max_dt = MAX(exchange_rate[Date])
 return ADDCOLUMNS(
     CALENDAR(min_dt, max_dt),
     "dateid", FORMAT([Date], "yyyy-mm-dd"),
@@ -56,10 +58,21 @@ return ADDCOLUMNS(
     )
 ```
 
+`dateid` is converted to `date` type, and will be used for the relationship in Power BI Model view.
 
+![data modeling](./02%20-%20data%20modeling.png)
 
 ## DAX Design & Implementation
 
+1. A measurement table is created to categorize different measures.
+
+```sql
+measurement = ROW("kpi_id", BLANK(), "kpi_name", BLANK())
+```
+
+2. Basic measurement
+
+- SGD rate
 
 
 
