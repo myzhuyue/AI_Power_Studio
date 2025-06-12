@@ -22,9 +22,9 @@
 
 ## Data Cleansing
 
-
-
-
+1. A simple data file contains 2 exchanges rate:
+   - SGD exchange rate to MYR
+   - CNY exchange rate to MYR
 
 ---
 
