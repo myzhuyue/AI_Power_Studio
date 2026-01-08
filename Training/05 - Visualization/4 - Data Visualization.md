@@ -32,6 +32,24 @@
 > - Which 20% of products make up 80% of sales
 > - Which 20% of customers make up 80% of profit.
 
+#### Why and When to Use
+- Focus: Identify the “vital few” categories driving most outcomes.
+- Use cases: defects/incidents, costs/revenue, service requests.
+
+#### How to Perform
+- Pick metric: Choose a single impact measure (count, cost, revenue).
+- Aggregate: Summarize by category and sort descending by impact.
+- Cumulative %: Compute cumulative share; mark smallest set reaching target (e.g., 80%).
+- Act: Prioritize improvements on those categories and track change.
+
+#### Power BI Implementation (Concept)
+- Visual: Line and clustered column chart; bars = impact by category; line = cumulative %.
+- Measures:
+    - Total Impact: `SUM(Fact[Impact])`
+    - Category Impact: `SUM(Fact[Impact])`
+    - Cumulative %: rank categories by impact, sum up to current rank, divide by total.
+- Tip: Use `ALLSELECTED()` in measures so slicers re-evaluate ranking and cumulative %.
+
 ---
 
 > 帕累托分析是一种将帕累托原理应用于数据的统计技术，其更为人熟知的名称是80:20法则。  
