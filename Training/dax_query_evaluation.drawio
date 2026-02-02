@@ -211,7 +211,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="p0gHZpx8wpnWBHLiJdF1" name="Recommended Practices">
-    <mxGraphModel dx="679" dy="377" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="501" dy="631" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -245,20 +245,50 @@
         <mxCell id="d5xJBEBZqx5iBN4Hmo5A-9" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rotation=0;gradientColor=#470CED;strokeColor=none;gradientDirection=east;fillColor=#9B76FF;rounded=0;pointerEvents=0;fontFamily=Helvetica;fontSize=16;fontColor=#FFFFFF;spacingTop=4;spacingBottom=4;spacingLeft=4;spacingRight=4;points=[];fontStyle=1" value="2" vertex="1">
           <mxGeometry height="30" width="30" x="291" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="d5xJBEBZqx5iBN4Hmo5A-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=14;verticalAlign=top;strokeColor=#3333FF;strokeWidth=1.5;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Learn these functions first" vertex="1">
-          <mxGeometry height="210" width="230" x="40" y="270" as="geometry" />
+        <mxCell id="d5xJBEBZqx5iBN4Hmo5A-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=14;verticalAlign=top;strokeColor=#3333FF;strokeWidth=1.5;" value="&lt;div&gt;Object Names, Columns and Measures&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="210" width="230" x="575" y="40" as="geometry" />
         </mxCell>
         <mxCell id="d5xJBEBZqx5iBN4Hmo5A-11" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;strokeColor=#3333FF;strokeWidth=1.5;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="40" y="320" as="sourcePoint" />
-            <mxPoint x="270" y="320" as="targetPoint" />
+            <mxPoint x="575" y="90" as="sourcePoint" />
+            <mxPoint x="805" y="90" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="d5xJBEBZqx5iBN4Hmo5A-12" parent="1" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=top;overflow=hidden;" value="&lt;ul&gt;&lt;li&gt;SUM&lt;/li&gt;&lt;li&gt;AVERAGE&lt;/li&gt;&lt;li&gt;MAX / MIN&lt;/li&gt;&lt;li&gt;DIVIDE&lt;/li&gt;&lt;li&gt;COUNT / DISTINCTCOUNT&lt;/li&gt;&lt;li&gt;COUNTROWS&lt;/li&gt;&lt;li&gt;CALCULATE&lt;/li&gt;&lt;li&gt;FILTER&lt;/li&gt;&lt;li&gt;IF / SWITCH&lt;/li&gt;&lt;/ul&gt;" vertex="1">
-          <mxGeometry height="150" width="230" x="40" y="312" as="geometry" />
+        <mxCell id="d5xJBEBZqx5iBN4Hmo5A-12" parent="1" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=top;overflow=hidden;" value="&lt;ul&gt;&lt;li&gt;Delete it if not needed&lt;/li&gt;&lt;li&gt;Keep internal column names hidden&lt;/li&gt;&lt;li&gt;Rename columns, use calculated columns and measures to define user-friendly names&lt;/li&gt;&lt;li&gt;Use explicit measure where possible&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="150" width="230" x="575" y="82" as="geometry" />
         </mxCell>
         <mxCell id="d5xJBEBZqx5iBN4Hmo5A-13" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rotation=0;gradientColor=#470CED;strokeColor=none;gradientDirection=east;fillColor=#9B76FF;rounded=0;pointerEvents=0;fontFamily=Helvetica;fontSize=16;fontColor=#FFFFFF;spacingTop=4;spacingBottom=4;spacingLeft=4;spacingRight=4;points=[];fontStyle=1" value="3" vertex="1">
-          <mxGeometry height="30" width="30" x="25" y="260" as="geometry" />
+          <mxGeometry height="30" width="30" x="560" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="d5xJBEBZqx5iBN4Hmo5A-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=14;verticalAlign=top;strokeColor=#3333FF;strokeWidth=1.5;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Define Measures in Categories&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="210" width="230" x="575" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="d5xJBEBZqx5iBN4Hmo5A-15" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;strokeColor=#3333FF;strokeWidth=1.5;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="575" y="360" as="sourcePoint" />
+            <mxPoint x="805" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d5xJBEBZqx5iBN4Hmo5A-16" parent="1" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=top;overflow=hidden;" value="&lt;ul&gt;&lt;li&gt;Simple aggregates&lt;/li&gt;&lt;li&gt;Time variances&lt;/li&gt;&lt;li&gt;Ratios and differentials&lt;/li&gt;&lt;li&gt;Business-specific calculations&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="150" width="230" x="575" y="352" as="geometry" />
+        </mxCell>
+        <mxCell id="d5xJBEBZqx5iBN4Hmo5A-17" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rotation=0;gradientColor=#470CED;strokeColor=none;gradientDirection=east;fillColor=#9B76FF;rounded=0;pointerEvents=0;fontFamily=Helvetica;fontSize=16;fontColor=#FFFFFF;spacingTop=4;spacingBottom=4;spacingLeft=4;spacingRight=4;points=[];fontStyle=1" value="4" vertex="1">
+          <mxGeometry height="30" width="30" x="560" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="d5xJBEBZqx5iBN4Hmo5A-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=14;verticalAlign=top;strokeColor=#3333FF;strokeWidth=1.5;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Follow these rules&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="280" width="230" x="575" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="d5xJBEBZqx5iBN4Hmo5A-19" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;strokeColor=#3333FF;strokeWidth=1.5;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="575" y="620" as="sourcePoint" />
+            <mxPoint x="805" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d5xJBEBZqx5iBN4Hmo5A-20" parent="1" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=top;overflow=hidden;" value="&lt;ul&gt;&lt;li&gt;Use the DIVIDE function for division&lt;/li&gt;&lt;li&gt;Column references should be fully qualified&lt;/li&gt;&lt;li&gt;Measure references should be unqualified&lt;/li&gt;&lt;li&gt;Measures should not be direct references of other measures&lt;/li&gt;&lt;li&gt;No two measures should have the same definition&lt;/li&gt;&lt;li&gt;Use the TREATAS function instead of INTERSECT for virtual relationships&lt;/li&gt;&lt;li&gt;Use Selective Conditions on Inner Functions&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="238" width="230" x="575" y="612" as="geometry" />
+        </mxCell>
+        <mxCell id="d5xJBEBZqx5iBN4Hmo5A-21" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rotation=0;gradientColor=#470CED;strokeColor=none;gradientDirection=east;fillColor=#9B76FF;rounded=0;pointerEvents=0;fontFamily=Helvetica;fontSize=16;fontColor=#FFFFFF;spacingTop=4;spacingBottom=4;spacingLeft=4;spacingRight=4;points=[];fontStyle=1" value="5" vertex="1">
+          <mxGeometry height="30" width="30" x="560" y="560" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
