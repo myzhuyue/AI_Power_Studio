@@ -1,40 +1,142 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.1 Safari/605.1.15" version="29.3.3">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.1 Safari/605.1.15" version="29.3.3" pages="2">
   <diagram name="Page-1" id="EdLkqrtL8PWX0Mx81qjw">
-    <mxGraphModel dx="1188" dy="659" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2377" dy="1318" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="iBgBhTXFELDywNAsxa8w-1" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;strokeColor=#0000CC;" value="&lt;b&gt;DAX Query&lt;/b&gt;" vertex="1">
-          <mxGeometry height="110" width="210" x="10" y="200" as="geometry" />
-        </mxCell>
-        <mxCell id="iBgBhTXFELDywNAsxa8w-2" parent="iBgBhTXFELDywNAsxa8w-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Vaccine Sales =&amp;nbsp;&lt;div&gt;&lt;span style=&quot;color: rgb(51, 51, 255);&quot;&gt;CALCULATE(&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(51, 51, 255);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [Sum of Sales]&lt;/span&gt;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &#39;Product&#39;[Category] = &quot;Vaccine&quot;)&lt;/div&gt;" vertex="1">
-          <mxGeometry height="80" width="210" y="30" as="geometry" />
-        </mxCell>
-        <mxCell id="iBgBhTXFELDywNAsxa8w-5" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;strokeColor=#0000CC;" value="&lt;b&gt;Formula Engine&lt;/b&gt;" vertex="1">
-          <mxGeometry height="110" width="121" x="330" y="200" as="geometry" />
-        </mxCell>
-        <mxCell id="iBgBhTXFELDywNAsxa8w-7" parent="1" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.automation;pointerEvents=1;" value="" vertex="1">
-          <mxGeometry height="45" width="50" x="365.5" y="246" as="geometry" />
-        </mxCell>
-        <mxCell id="iBgBhTXFELDywNAsxa8w-8" edge="1" parent="1" source="iBgBhTXFELDywNAsxa8w-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#3333FF;" value="">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="330" y="270" as="targetPoint" />
+        <mxCell id="iBgBhTXFELDywNAsxa8w-1" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;strokeColor=#666666;fillColor=#f5f5f5;fontColor=#333333;" value="&lt;b&gt;DAX Query&lt;/b&gt;" vertex="1">
+          <mxGeometry height="110" width="210" x="130" y="470.5" as="geometry">
+            <mxRectangle height="30" width="100" x="10" y="200" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="iBgBhTXFELDywNAsxa8w-11" edge="1" parent="1" source="iBgBhTXFELDywNAsxa8w-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#3333FF;endArrow=none;endFill=0;" target="iBgBhTXFELDywNAsxa8w-10" value="">
+        <mxCell id="iBgBhTXFELDywNAsxa8w-2" parent="iBgBhTXFELDywNAsxa8w-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Online Sales =&amp;nbsp;&lt;div&gt;&lt;span style=&quot;color: rgb(51, 51, 255);&quot;&gt;CALCULATE(&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(51, 51, 255);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [Sum of Sales]&lt;/span&gt;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &#39;Channel&#39;[Category] = &quot;Online&quot;)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="210" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iBgBhTXFELDywNAsxa8w-5" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" value="&lt;b&gt;Formula Engine&lt;/b&gt;" vertex="1">
+          <mxGeometry height="110" width="151" x="450" y="470.5" as="geometry">
+            <mxRectangle height="30" width="130" x="330" y="200" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iBgBhTXFELDywNAsxa8w-8" edge="1" parent="1" source="iBgBhTXFELDywNAsxa8w-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#3333FF;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="iBgBhTXFELDywNAsxa8w-5" value="">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="260" y="270" as="sourcePoint" />
-            <mxPoint x="320" y="270" as="targetPoint" />
+            <mxPoint x="450" y="540.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iBgBhTXFELDywNAsxa8w-11" edge="1" parent="1" source="iBgBhTXFELDywNAsxa8w-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#3333FF;endArrow=none;endFill=0;exitX=1;exitY=0.302;exitDx=0;exitDy=0;exitPerimeter=0;" target="iBgBhTXFELDywNAsxa8w-10" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="540.5" as="sourcePoint" />
+            <mxPoint x="440" y="540.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="iBgBhTXFELDywNAsxa8w-10" parent="1" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://icons.diagrams.net/icon-cache1/GlyphPack-2536/function-634.svg;fontColor=#3333FF;imageBackground=default;" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;DAX Query is sent to&lt;/font&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;the Formula Engine&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="25" width="27.78" x="261" y="257.5" as="geometry" />
+          <mxGeometry height="25" width="27.78" x="381" y="512.5" as="geometry" />
         </mxCell>
-        <mxCell id="8gYloqoiVtO0-N1D3Mn3-1" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;strokeColor=#0000CC;" value="&lt;b&gt;Storage Engine&lt;/b&gt;" vertex="1">
-          <mxGeometry height="110" width="121" x="530" y="200" as="geometry" />
+        <mxCell id="8gYloqoiVtO0-N1D3Mn3-1" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;strokeColor=#6c8ebf;container=0;fillColor=#dae8fc;" value="&lt;b&gt;Storage Engine&lt;/b&gt;" vertex="1">
+          <mxGeometry height="110" width="145" x="720" y="470.5" as="geometry">
+            <mxRectangle height="30" width="130" x="500" y="200" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="8gYloqoiVtO0-N1D3Mn3-3" parent="1" style="sketch=0;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.databases.database_mini_3;fillColor=#2072B8;" value="" vertex="1">
-          <mxGeometry height="57" width="35" x="470" y="230" as="geometry" />
+        <mxCell id="8gYloqoiVtO0-N1D3Mn3-18" parent="1" style="sketch=0;shadow=0;dashed=0;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.databases.database_mini_3;fillColor=#2072B8;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="50" x="764.5" y="513.5" as="geometry" />
+        </mxCell>
+        <mxCell id="gJTY5MNykG9xHGOscY-h-1" parent="1" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.automation;pointerEvents=1;" value="" vertex="1">
+          <mxGeometry height="45" width="50" x="500.5" y="517.5" as="geometry" />
+        </mxCell>
+        <mxCell id="gJTY5MNykG9xHGOscY-h-2" parent="1" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://icons.diagrams.net/icon-cache1/Boxicons_Regular_Vol_1-2633/bx-calculator-778.svg" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Formula Engine&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;processes the query&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;and sends a query plan&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;to the Storage Engine&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="24" width="24" x="649" y="513.5" as="geometry" />
+        </mxCell>
+        <mxCell id="gJTY5MNykG9xHGOscY-h-3" edge="1" parent="1" source="iBgBhTXFELDywNAsxa8w-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#3333FF;endArrow=none;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="gJTY5MNykG9xHGOscY-h-2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="540.5" as="sourcePoint" />
+            <mxPoint x="511" y="660.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJTY5MNykG9xHGOscY-h-5" edge="1" parent="1" source="gJTY5MNykG9xHGOscY-h-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#3333FF;endArrow=classic;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="8gYloqoiVtO0-N1D3Mn3-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="590.5" as="sourcePoint" />
+            <mxPoint x="720" y="530.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJTY5MNykG9xHGOscY-h-6" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" value="&lt;b&gt;Formula Engine&lt;/b&gt;" vertex="1">
+          <mxGeometry height="110" width="151" x="980" y="470.5" as="geometry">
+            <mxRectangle height="30" width="130" x="330" y="200" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJTY5MNykG9xHGOscY-h-7" parent="1" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.automation;pointerEvents=1;" value="" vertex="1">
+          <mxGeometry height="45" width="50" x="1030.5" y="517.5" as="geometry" />
+        </mxCell>
+        <mxCell id="gJTY5MNykG9xHGOscY-h-8" parent="1" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.table;fillColor=#2E73B8;gradientColor=none;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Storage Engine&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;executes plan and&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;sends a data cache&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;back to the Formula Engine&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="26" width="23" x="910" y="512.5" as="geometry" />
+        </mxCell>
+        <mxCell id="gJTY5MNykG9xHGOscY-h-9" edge="1" parent="1" source="8gYloqoiVtO0-N1D3Mn3-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#3333FF;endArrow=none;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="gJTY5MNykG9xHGOscY-h-8" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="640.5" as="sourcePoint" />
+            <mxPoint x="747" y="640.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJTY5MNykG9xHGOscY-h-10" edge="1" parent="1" source="gJTY5MNykG9xHGOscY-h-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#3333FF;endArrow=classic;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gJTY5MNykG9xHGOscY-h-6" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="880" y="550.5" as="sourcePoint" />
+            <mxPoint x="925" y="550.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJTY5MNykG9xHGOscY-h-11" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;strokeColor=#666666;fillColor=#f5f5f5;fontColor=#333333;" value="&lt;b&gt;Output&lt;/b&gt;" vertex="1">
+          <mxGeometry height="110" width="260" x="1260" y="470" as="geometry">
+            <mxRectangle height="30" width="130" x="330" y="200" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJTY5MNykG9xHGOscY-h-12" parent="1" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://icons.diagrams.net/icon-cache1/Boxicons_Regular_Vol_1-2633/bx-calculator-778.svg" value="&lt;font size=&quot;1&quot;&gt;Formula Engine runs&lt;/font&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;the DAX query against&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;data cache and&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;evaluates&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;the result&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="24" width="24" x="1180" y="513.5" as="geometry" />
+        </mxCell>
+        <mxCell id="gJTY5MNykG9xHGOscY-h-13" edge="1" parent="1" source="gJTY5MNykG9xHGOscY-h-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#3333FF;endArrow=none;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="gJTY5MNykG9xHGOscY-h-12" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="960" y="590.5" as="sourcePoint" />
+            <mxPoint x="1005" y="590.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJTY5MNykG9xHGOscY-h-14" edge="1" parent="1" source="gJTY5MNykG9xHGOscY-h-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#3333FF;endArrow=classic;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gJTY5MNykG9xHGOscY-h-11" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="950" y="520.5" as="sourcePoint" />
+            <mxPoint x="997" y="520.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJTY5MNykG9xHGOscY-h-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6666FF;" value="&lt;span style=&quot;color: rgb(255, 255, 255);&quot;&gt;&lt;b&gt;Online Sales&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="20" width="120" x="1330" y="511.5" as="geometry" />
+        </mxCell>
+        <mxCell id="gJTY5MNykG9xHGOscY-h-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=28;fontStyle=1" value="$ 5.22 M" vertex="1">
+          <mxGeometry height="30" width="125" x="1328" y="539.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="OEOiHS3xKuo-mag4dH3C" name="backup">
+    <mxGraphModel dx="1426" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Mq9AySmbDkFM0_HWrgmg-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" value="&lt;b&gt;Formula Engine&lt;/b&gt;" vertex="1">
+          <mxGeometry height="90" width="110" x="304" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="Mq9AySmbDkFM0_HWrgmg-2" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="304" y="317.5" as="sourcePoint" />
+            <mxPoint x="414" y="318" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mq9AySmbDkFM0_HWrgmg-3" parent="1" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.automation;pointerEvents=1;" value="" vertex="1">
+          <mxGeometry height="45" width="50" x="334" y="325.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Mq9AySmbDkFM0_HWrgmg-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" value="&lt;b&gt;Formula Engine&lt;/b&gt;" vertex="1">
+          <mxGeometry height="110" width="260" x="134" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="Mq9AySmbDkFM0_HWrgmg-5" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; float: none; display: inline !important;&quot;&gt;Vaccine Sales =&amp;nbsp;&lt;/span&gt;&lt;div style=&quot;caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 255);&quot;&gt;CALCULATE(&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 255);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [Sum of Sales]&lt;/span&gt;,&lt;/div&gt;&lt;div style=&quot;caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &#39;Product&#39;[Category] = &quot;Vaccine&quot;)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="230" x="149" y="420.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Mq9AySmbDkFM0_HWrgmg-6" edge="1" parent="1" source="Mq9AySmbDkFM0_HWrgmg-4" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="Mq9AySmbDkFM0_HWrgmg-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="134" y="440" as="sourcePoint" />
+            <mxPoint x="244" y="440.5" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
