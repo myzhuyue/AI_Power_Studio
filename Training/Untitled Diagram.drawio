@@ -1,0 +1,36 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.1 Safari/605.1.15" version="29.3.3">
+  <diagram name="Page-1" id="EdLkqrtL8PWX0Mx81qjw">
+    <mxGraphModel dx="1188" dy="659" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="iBgBhTXFELDywNAsxa8w-1" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;strokeColor=#0000CC;" value="&lt;b&gt;DAX Query&lt;/b&gt;" vertex="1">
+          <mxGeometry height="110" width="210" x="10" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="iBgBhTXFELDywNAsxa8w-2" parent="iBgBhTXFELDywNAsxa8w-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Vaccine Sales =&amp;nbsp;&lt;div&gt;&lt;span style=&quot;color: rgb(51, 51, 255);&quot;&gt;CALCULATE(&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(51, 51, 255);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [Sum of Sales]&lt;/span&gt;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &#39;Product&#39;[Category] = &quot;Vaccine&quot;)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="210" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iBgBhTXFELDywNAsxa8w-5" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;strokeColor=#0000CC;" value="&lt;b&gt;Formula&lt;/b&gt;" vertex="1">
+          <mxGeometry height="110" width="151" x="350" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="iBgBhTXFELDywNAsxa8w-7" parent="1" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.automation;pointerEvents=1;" value="" vertex="1">
+          <mxGeometry height="45" width="50" x="400" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="iBgBhTXFELDywNAsxa8w-8" edge="1" parent="1" source="iBgBhTXFELDywNAsxa8w-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#3333FF;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iBgBhTXFELDywNAsxa8w-11" edge="1" parent="1" source="iBgBhTXFELDywNAsxa8w-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#3333FF;endArrow=none;endFill=0;" target="iBgBhTXFELDywNAsxa8w-10" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="270" as="sourcePoint" />
+            <mxPoint x="320" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iBgBhTXFELDywNAsxa8w-10" parent="1" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://icons.diagrams.net/icon-cache1/GlyphPack-2536/function-634.svg;fontColor=#3333FF;imageBackground=default;" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;DAX Query is sent to&lt;/font&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;the Formula Engine&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="25" width="27.78" x="272" y="257.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
