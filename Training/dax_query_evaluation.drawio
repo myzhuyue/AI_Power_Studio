@@ -749,8 +749,8 @@
         <mxCell id="tkBxnzqHJDYmU3uBe2u1-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=none;" value="&lt;i&gt;&lt;b&gt;Lookup&lt;/b&gt; functions based on related tables and &lt;b&gt;filtering&lt;/b&gt; functions for dynamic calculations&lt;/i&gt;" vertex="1">
           <mxGeometry height="80" width="140" x="499" y="236" as="geometry" />
         </mxCell>
-        <mxCell id="tkBxnzqHJDYmU3uBe2u1-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=none;" value="&lt;i&gt;&lt;b&gt;Basic &lt;/b&gt;date &amp;amp; time functions as well as advanced time intelligence operations&lt;/i&gt;" vertex="1">
-          <mxGeometry height="80" width="140" x="654" y="236" as="geometry" />
+        <mxCell id="tkBxnzqHJDYmU3uBe2u1-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=none;" value="&lt;i&gt;Basic&lt;b&gt; date &amp;amp; time &lt;/b&gt;functions as well as advanced &lt;b&gt;time&lt;/b&gt; &lt;b&gt;intelligence&lt;/b&gt; operations&lt;/i&gt;" vertex="1">
+          <mxGeometry height="80" width="141" x="654" y="236" as="geometry" />
         </mxCell>
         <mxCell id="tkBxnzqHJDYmU3uBe2u1-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;" value="&lt;b&gt;&lt;i&gt;Common Examples&lt;/i&gt;&lt;/b&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;SUM&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;AVERAGE&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;MAX/MIN&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;DIVIDE&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;COUNT/COUNTA&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;COUNTROWS&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;DISTINCTCOUNT&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;b&gt;&lt;i&gt;Iterator Functions&lt;/i&gt;&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;SUMX&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;AVERAGEX&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;MAXX/MINX&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;RANKX&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;COUNTX&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="273" width="140" x="34" y="338" as="geometry" />
@@ -766,6 +766,30 @@
         </mxCell>
         <mxCell id="tkBxnzqHJDYmU3uBe2u1-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;" value="&lt;b&gt;&lt;i&gt;Common Examples&lt;/i&gt;&lt;/b&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 10px;&quot;&gt;CALCULATE&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 10px;&quot;&gt;DATEDIFF&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 10px;&quot;&gt;YEARFRAC&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 10px;&quot;&gt;YEAR/MONTH/DAY&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 10px;&quot;&gt;HOUR/MINUTE/SECOND&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 10px;&quot;&gt;TODAY/NOW&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 10px;&quot;&gt;WEEKDAY/WEEKNUM&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;b style=&quot;font-style: italic;&quot;&gt;Time Intelligence&amp;nbsp;&lt;/b&gt;&lt;b&gt;&lt;i&gt;Functions&lt;/i&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;DATESYTD&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;DATESQTD&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;DATESMTD&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;DATEADD&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;DATESINPERIOD&lt;/font&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="273" width="165" x="654" y="338" as="geometry" />
+        </mxCell>
+        <mxCell id="tkBxnzqHJDYmU3uBe2u1-18" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;fillColor=#eeeeee;strokeColor=#ECECEC;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="182" y="642" as="sourcePoint" />
+            <mxPoint x="182" y="154" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tkBxnzqHJDYmU3uBe2u1-19" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;fillColor=#eeeeee;strokeColor=#ECECEC;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="336" y="642" as="sourcePoint" />
+            <mxPoint x="336" y="154" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tkBxnzqHJDYmU3uBe2u1-20" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;fillColor=#eeeeee;strokeColor=#ECECEC;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="491" y="642" as="sourcePoint" />
+            <mxPoint x="491" y="154" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tkBxnzqHJDYmU3uBe2u1-21" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;fillColor=#eeeeee;strokeColor=#ECECEC;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="646" y="642" as="sourcePoint" />
+            <mxPoint x="646" y="154" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
