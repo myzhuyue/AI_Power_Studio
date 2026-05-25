@@ -648,7 +648,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="3dVJbICrIcI7alagjb7w" name="Page-3">
-    <mxGraphModel dx="1660" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1465" dy="742" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -659,31 +659,31 @@
           <mxGeometry height="32" width="1380" x="40" y="340" as="geometry" />
         </mxCell>
         <mxCell id="z-FP_VYsjESvsKH5nHIt-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#9E9E9E;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontSize=13;fontStyle=1;" value="L7 · Consumption" vertex="1">
-          <mxGeometry height="80" width="1380" x="40" y="385" as="geometry" />
+          <mxGeometry height="80" width="1380" x="40" y="372" as="geometry" />
         </mxCell>
         <mxCell id="z-FP_VYsjESvsKH5nHIt-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=11;" value="Power BI / Tableau&#xa;(Rep / Manager scorecards)" vertex="1">
-          <mxGeometry height="40" width="240" x="80" y="415" as="geometry" />
+          <mxGeometry height="40" width="240" x="80" y="402" as="geometry" />
         </mxCell>
-        <mxCell id="z-FP_VYsjESvsKH5nHIt-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=11;" value="LLM Agent / Copilot&#xa;NL → metric · Next-Best-Action · RAG" vertex="1">
-          <mxGeometry height="40" width="320" x="600" y="415" as="geometry" />
+        <mxCell id="z-FP_VYsjESvsKH5nHIt-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=11;" value="LLM Agent&lt;br&gt;NL → metric · Next-Best-Action · RAG" vertex="1">
+          <mxGeometry height="40" width="320" x="600" y="402" as="geometry" />
         </mxCell>
         <mxCell id="z-FP_VYsjESvsKH5nHIt-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=11;" value="Apps / Embedded Analytics / APIs" vertex="1">
-          <mxGeometry height="40" width="260" x="970" y="415" as="geometry" />
+          <mxGeometry height="40" width="260" x="970" y="402" as="geometry" />
         </mxCell>
         <mxCell id="z-FP_VYsjESvsKH5nHIt-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F7FA;strokeColor=#26A69A;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontSize=13;fontStyle=1;" value="L6 · Semantic Layer (Query API)  —  one definition served identically to BI and AI" vertex="1">
-          <mxGeometry height="80" width="1380" x="40" y="480" as="geometry" />
+          <mxGeometry height="80" width="1380" x="40" y="467" as="geometry" />
         </mxCell>
         <mxCell id="z-FP_VYsjESvsKH5nHIt-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#26A69A;fontSize=11;fontFamily=Courier New;" value="GET /metrics/target_hcps&#xa;?rep=&amp;period=" vertex="1">
-          <mxGeometry height="40" width="240" x="80" y="510" as="geometry" />
+          <mxGeometry height="40" width="240" x="80" y="497" as="geometry" />
         </mxCell>
         <mxCell id="z-FP_VYsjESvsKH5nHIt-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#26A69A;fontSize=11;fontFamily=Courier New;" value="GET /metrics/reach&#xa;?rep=&amp;period=&amp;channel=" vertex="1">
-          <mxGeometry height="40" width="240" x="340" y="510" as="geometry" />
+          <mxGeometry height="40" width="240" x="340" y="497" as="geometry" />
         </mxCell>
         <mxCell id="z-FP_VYsjESvsKH5nHIt-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#26A69A;fontSize=11;fontFamily=Courier New;" value="agent.tool: query_metric( … )&#xa;agent.tool: traverse_concept( … )" vertex="1">
-          <mxGeometry height="40" width="320" x="600" y="510" as="geometry" />
+          <mxGeometry height="40" width="320" x="600" y="497" as="geometry" />
         </mxCell>
         <mxCell id="z-FP_VYsjESvsKH5nHIt-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#26A69A;fontSize=11;" value="Policies: PIPL · row-level (Rep hierarchy)&#xa;column masking · audit trail" vertex="1">
-          <mxGeometry height="40" width="320" x="940" y="510" as="geometry" />
+          <mxGeometry height="40" width="320" x="940" y="497" as="geometry" />
         </mxCell>
         <mxCell id="z-FP_VYsjESvsKH5nHIt-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontSize=13;fontStyle=1;" value="L5 · Semantic Model  —  Entities · Metrics · Dimensions (the operational binding)" vertex="1">
           <mxGeometry height="140" width="1380" x="40" y="575" as="geometry" />
@@ -990,11 +990,11 @@
         <mxCell id="z-FP_VYsjESvsKH5nHIt-117" edge="1" parent="1" source="z-FP_VYsjESvsKH5nHIt-81" style="endArrow=classicThin;startArrow=classicThin;html=1;rounded=0;strokeColor=#8E24AA;strokeWidth=1.5;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=9;fontStyle=2;fontColor=#6A1B9A;" target="z-FP_VYsjESvsKH5nHIt-47" value="Link ≈ Property">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="z-FP_VYsjESvsKH5nHIt-118" edge="1" parent="1" source="z-FP_VYsjESvsKH5nHIt-25" style="endArrow=block;html=1;rounded=0;strokeColor=#26A69A;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=9;fontStyle=2;fontColor=#00695C;" target="z-FP_VYsjESvsKH5nHIt-13" value="publishes">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="z-FP_VYsjESvsKH5nHIt-119" edge="1" parent="1" source="z-FP_VYsjESvsKH5nHIt-26" style="endArrow=block;html=1;rounded=0;strokeColor=#26A69A;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="z-FP_VYsjESvsKH5nHIt-14">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="z-FP_VYsjESvsKH5nHIt-118" edge="1" parent="1" source="z-FP_VYsjESvsKH5nHIt-17" style="endArrow=block;html=1;rounded=0;strokeColor=#26A69A;strokeWidth=2;fontSize=9;fontStyle=2;fontColor=#00695C;" target="z-FP_VYsjESvsKH5nHIt-12" value="publishes">
+          <mxGeometry relative="1" x="0.0714" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="730" y="562" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="z-FP_VYsjESvsKH5nHIt-120" edge="1" parent="1" source="z-FP_VYsjESvsKH5nHIt-13" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="z-FP_VYsjESvsKH5nHIt-9">
           <mxGeometry relative="1" as="geometry" />
@@ -1031,6 +1031,20 @@
         </mxCell>
         <mxCell id="z-FP_VYsjESvsKH5nHIt-131" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE082;strokeColor=#F9A825;fontSize=9;fontStyle=1;fontColor=#5D4037;" value="Fact / metric (gold)" vertex="1">
           <mxGeometry height="20" width="160" x="1450" y="1368" as="geometry" />
+        </mxCell>
+        <mxCell id="z-FP_VYsjESvsKH5nHIt-132" edge="1" parent="1" style="endArrow=block;html=1;rounded=0;strokeColor=#26A69A;strokeWidth=2;fontSize=9;fontStyle=2;fontColor=#00695C;" value="publishes">
+          <mxGeometry relative="1" x="0.0714" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="1099" y="575" as="sourcePoint" />
+            <mxPoint x="1099" y="546.9999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z-FP_VYsjESvsKH5nHIt-133" edge="1" parent="1" style="endArrow=block;html=1;rounded=0;strokeColor=#26A69A;strokeWidth=2;fontSize=9;fontStyle=2;fontColor=#00695C;" value="publishes">
+          <mxGeometry relative="1" x="0.0714" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="327" y="575" as="sourcePoint" />
+            <mxPoint x="327" y="546.9999999999998" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
