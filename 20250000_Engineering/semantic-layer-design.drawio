@@ -315,7 +315,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ia96z2sZihN7ZRwPBgyu" name="Page-2">
+  <diagram id="ia96z2sZihN7ZRwPBgyu" name="centralized-semantic-layer-with-medallion-architecture">
     <mxGraphModel dx="1653" dy="792" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
